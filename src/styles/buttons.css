@@ -1,0 +1,12 @@
+@tailwind components;
+
+@layer base {
+    button,
+    [type="button"],
+    [type="submit"]
+    {
+        @apply p-3 rounded-lg font-bold;
+        background-color: var(--bg-color-secondary);
+        color: var(--color-secondary)
+    }
+}
