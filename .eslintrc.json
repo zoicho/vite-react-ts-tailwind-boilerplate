@@ -2,6 +2,9 @@
     "settings": {
         "import/resolver": {
             "typescript": {}
+        },
+        "react": {
+            "version": "detect"
         }
     },
     "env": {
@@ -12,7 +15,8 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "airbnb",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",
@@ -24,10 +28,15 @@
         "sourceType": "module"
     },
     "plugins": [
+        "import",
         "react",
         "@typescript-eslint"
     ],
     "rules": {
+        "object-curly-spacing": ["warn", "always"],
+        /*"object-curly-spacing": "always",
+        "@typescript-eslint/object-curly-spacing": "warn",*/
+        "no-console": "off",
         "react/react-in-jsx-scope": "off",
         "semi": ["warn", "always"],
         "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
@@ -41,6 +50,19 @@
                 "jsx": "never",
                 "ts": "never",
                 "tsx": "never"
+            }
+        ],
+        "jsx-a11y/no-noninteractive-element-interactions": [
+            "off",
+            {
+                "handlers": [
+                    "onClick",
+                    "onMouseDown",
+                    "onMouseUp",
+                    "onKeyPress",
+                    "onKeyDown",
+                    "onKeyUp"
+                ]
             }
         ]
     }
