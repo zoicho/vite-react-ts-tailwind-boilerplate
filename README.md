@@ -1,4 +1,4 @@
-# Vite React Typescript Tailwind CSS Boilerplate
+# Vite React Typescript Tailwind ESLint Prettier Boilerplate
 
 ```
 npm ci
